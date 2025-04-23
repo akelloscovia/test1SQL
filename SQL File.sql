@@ -19,8 +19,22 @@ INSERT INTO Finance(StudentName, StudentID,Birthdate, Year, MoblileNo) VALUE
 ('Grace','127','2000-1-14','Y1S2'07337659987')
 
   ii)
-  -- CREARE TABLE Finance(
-  Y1S1,
-  filename VARCHAR(100);
+  SELECT s.StudentName, Finance Tuition_Fee
+FROM tblStudent s
+JOIN tblFinance f ON s.StudentID = Finance StudentID
+WHERE Year = 'Y1S1';
 
   iii)
+  SELECT s.StudentName, s.StudentID, s.Year, Finance Tuition_Fee
+FROM tblStudent s
+JOIN tblFinance f ON s.StudentID = Finance StudentID
+WHERE Finance Tuition_Fee >= 30000;
+
+  iv)
+  INSERT INTO tblStudent (StudentName, StudentID, Birthdate, Year, MobileNo)
+VALUES ('Dan', NULL, '2001-04-20', 'Y1S2', '0723456123');
+
+  v)
+  UPDATE tblStudent
+SET StudentName = 'Nelson'
+WHERE StudentID = 26;
